@@ -1,25 +1,40 @@
 /* Universal Styles */
 
+@font-face {
+  font-family: "Martel Sans";
+  src: url(../fonts/MartelSans-SemiBold.ttf) format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Martel Sans";
+  src: url(../fonts/MartelSans-ExtraBold.ttf) format('truetype');
+  font-weight: 900;
+}
+
 html {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 
 :root {
-  --width-mobile: 760px; /* 480px for mobile devices *** TODO: Fix *** */
-  --color-light: red; /* #c0c0c0; *** TODO: Restore *** */
-  --color-medium: green; /* #797979; *** TODO: Restore *** */
-  --color-dark: blue; /* #323232; *** TODO: Restore *** */
+  --color-light: #BBB;
+  --color-medium: #7F7F7F;
+  --color-dark: #555;
 }
 
 header, .flex, .navbar {
   display: flex;
 }
 
+.image {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
-  overflow: hidden;
+  display: block;
 }
 
 h1, h2, h3, h4, h5 {
@@ -40,7 +55,7 @@ header {
   z-index: 1;
   color: var(--color-medium);
   background-color: white;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid red; /* Temporary visual aid */
 }
 
 .navbar {
@@ -61,12 +76,19 @@ header img {
   max-height: 2rem;
 }
 
+#logo-txt span {
+  font-family: "Martel Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.06em;
+}
+
 #logo-txt span:first-child {
   color: var(--color-dark);
+  font-weight: 900;
 }
 
 #logo-txt span:last-child {
   color: var(--color-light);
+  font-weight: 600;
 }
 
 /* Header: Nav section */
