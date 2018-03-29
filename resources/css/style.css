@@ -60,13 +60,20 @@ header {
 
 .navbar {
   width: 100%;
-  max-height: 100%;
-  margin: 0 1.5rem;
   align-items: center;
+}
+
+.desktop.navbar {
+  margin: 0 1.5rem;
   justify-content: space-between;
 }
 
-/* Header: Logo section */
+.mobile.navbar .flex {
+  width: 100%;
+  justify-content: space-around;
+}
+
+/* Header: Desktop logo section */
 
 #logo {
   align-items: center;
@@ -76,7 +83,7 @@ header img {
   max-height: 2rem;
 }
 
-#logo-txt span {
+#logo-txt span { /* imported font w/weights: 600 & 900 */
   font-family: "Martel Sans", Helvetica, Arial, sans-serif;
   letter-spacing: -0.06em;
 }
@@ -91,16 +98,10 @@ header img {
   font-weight: 600;
 }
 
-/* Header: Nav section */
+/* Header: Desktop nav section */
 
 .desktop nav li:nth-child(1n + 2) { /* Space between links */
   padding-left: 1rem;
-}
-
-.mobile .flex {
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
 }
 
 /* Desktop */
