@@ -46,6 +46,22 @@ p, span, a {
   text-decoration: none;
 }
 
+/* Universal Styles: Desktop */
+
+@media only screen and (min-width: 625px) {
+  .mobile {
+    display: none;
+  }
+}
+
+/* Universal Styles: Mobile */
+
+@media only screen and (max-width: 625px) {
+  .desktop {
+    display: none;
+  }
+}
+
 /* Header */
 
 header {
@@ -100,22 +116,53 @@ header img {
 
 /* Header: Desktop nav section */
 
-.desktop nav li:nth-child(1n + 2) { /* Space between links */
+.desktop li:nth-child(1n + 2) { /* Space between links */
   padding-left: 1rem;
 }
 
-/* Desktop */
-
-@media only screen and (min-width: 625px) {
-  .mobile {
-    display: none;
-  }
+/* Main Content */
+#main-content {
+  height: 80px;
+  width: 100%;
+  background-color: blue;
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
 }
 
-/* Mobile */
+#banner, #courses {
+  background-color: #DDD;
+}
+
+.main {
+  width: 60%;
+  margin: 2rem 1.5rem;
+}
+
+.sidebar {
+  width: 40%;
+}
+
+/* Main Content: Banner */
+
+/* Footer */
+
+footer {
+  width: 100%;
+  border-top: 2px solid red;
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.75rem;
+}
+
+footer div.flex {
+  margin: 1rem 1.5rem;
+  justify-content: space-between;
+}
 
 @media only screen and (max-width: 625px) {
-  .desktop {
-    display: none;
+  footer {
+    margin-top: 1.5rem;
   }
 }
