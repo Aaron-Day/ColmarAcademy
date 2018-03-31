@@ -1,87 +1,199 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Colmar Academy</title>
-		<link href="resources/css/reset.css" type="text/css" rel="stylesheet"/>
-		<link href="resources/css/style.css" type="text/css" rel="stylesheet"/>
-	</head>
-	<body>
-		<!--HEADER-->
-		<header>
-			<div class="desktop navbar">
-				<div class="flex" id="logo">
+  <head>
+    <title>Colmar Academy</title>
+    <link href="resources/css/reset.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/style.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="box wide">
+      <!-- Header: Desktop only -->
+			<div class="desktop box wide between content">
+				<div class="box align-center" id="logo">
 					<img src="resources/images/ic-logo.svg"/>
-					<div id="logo-txt">
+					<div class="box" id="logo-txt">
 						<span>COLMAR</span><span>ACADEMY</span>
 					</div>
 				</div>
 				<nav>
-					<ul class="flex">
-						<li><a href="#">On campus</a></li>
-						<li><a href="#">Online</a></li>
-						<li><a href="#">For companies</a></li>
-						<li><a href="#">Sign in</a></li>
+					<ul class="box tall">
+						<li><a class="btn" href="#">On campus</a></li>
+						<li><a class="btn" href="#">Online</a></li>
+						<li><a class="btn" href="#">For companies</a></li>
+						<li><a class="btn" href="#">Sign in</a></li>
 					</ul>
 				</nav>
 			</div>
-			<nav class="mobile navbar">
-				<ul class="flex">
+      <!-- Header: Mobile only -->
+			<nav class="mobile wide">
+				<ul class="box wide tall around align-center">
 					<li><img src="resources/images/ic-logo.svg" alt="Colmar academy"/></li>
-					<li><a href="#"><img src="resources/images/ic-on-campus.svg" alt="On campus"/></a></li>
-					<li><a href="#"><img src="resources/images/ic-online.svg" alt="Online"/></a></li>
-					<li><a href="#"><img src="resources/images/ic-login.svg" alt="Sign in"/></a></li>
+					<li><a class="btn" href="#"><img src="resources/images/ic-on-campus.svg" alt="On campus"/></a></li>
+					<li><a class="btn" href="#"><img src="resources/images/ic-online.svg" alt="Online"/></a></li>
+					<li><a class="btn" href="#"><img src="resources/images/ic-login.svg" alt="Sign in"/></a></li>
 			</nav>
-		</header>
+    </header>
 
-		<!--MAIN CONTENT-->
-		<div id="main-content">
-			<div id="banner">
-				<div class="main">
-				</div>
-				<div class="sidebar">
-				</div>
-			</div>
-			<div id="information">
-				<div class="main">
-				</div>
-				<div class="sidebar">
-				</div>
-			</div>
-			<div id="courses">
-				<div class="course">
-				</div>
-				<div class="course">
-				</div>
-				<div class="course">
-				</div>
-				<div class="course">
-				</div>
-				<div class="course">
-				</div>
-				<div class="course">
-				</div>
-			</div>
-			<div id="thesis">
-				<div class="main">
-				</div>
-				<div class="sidebar">
-				</div>
-			</div>
-		</div><!--MAIN CONTENT: CLOSE-->
+    <!-- Main Content -->
+    <div>
+      <!-- Main Content: Banner section -->
+      <div class="box wide" id="banner-section">
+        <div class="box main column">
+					<img src="resources/images/banner.jpg"/>
+        </div>
+        <div class="box sidebar column">
+          <span class="main-title">Learn something new everyday</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a class="btn dark" href="#">Start here</a>
+        </div>
+      </div>
+      <!-- Main Content: Banner section -->
 
-		<!--FOOTER-->
-		<footer>
-			<div class="flex">
-				<div id="copyright">
-					<span>&copy;2016 Colmar Academy. All rights reserved</span>
-				</div>
-				<nav class="desktop">
-					<ul class="flex">
-						<li><a href="#">Terms</a></li>
-						<li><a href="#">Privacy</a></li>
-					</ul>
-				</nav>
-			</div>
-		</footer>
-	</body>
+      <!-- Main Content: Information section -->
+      <div class="box wide" id="information-section">
+        <div class="desktop box main column">
+          <img src="resources/images/information-main.jpg"/>
+					<span class="main-title">It doesn't hurt to keep practicing</span>
+					<p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et
+						commodo lectus, nec consequat neque. Sed non accumsan urna.
+						Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur
+						dolor consequat, tristique ligula."</p>
+					<span class="caption">Emanuel, Sr Strategist at Hiring.com</span>
+        </div>
+        <div class="box sidebar column">
+          <div class="box wide align-center">
+            <div class="sidebar-image desktop">
+							<img src="resources/images/information-orientation.jpg"/>
+            </div>
+            <div class="sidebar-content column">
+							<img class="mobile" src="resources/images/information-orientation-mobile.jpg"/>
+              <span class="sidebar-title">Orientation date</span>
+							<p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
+							<a class="read-more" href="#">Read more</a>
+            </div>
+          </div>
+          <div class="box wide align-center">
+            <div class="sidebar-image desktop">
+							<img src="resources/images/information-campus.jpg"/>
+            </div>
+            <div class="sidebar-content column">
+							<img class="mobile" src="resources/images/information-campus-mobile.jpg"/>
+              <span class="sidebar-title">Our campus</span>
+							<p>Find which campus is close by you</p>
+							<a class="read-more" href="#">Read more</a>
+            </div>
+          </div>
+          <div class="box wide align-center highlight">
+            <div class="sidebar-image desktop">
+							<img src="resources/images/information-guest-lecture.jpg"/>
+            </div>
+            <div class="sidebar-content column">
+							<img class="mobile" src="resources/images/information-guest-lecture-mobile.jpg"/>
+              <span class="sidebar-title">Our guest lecture</span>
+							<p>Join a keynote with Oliver Sack about music in medical
+								treatment</p>
+							<a class="read-more" href="#">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main Content: Information section -->
+
+      <!-- Main Content: Subject section -->
+      <div class="box wide column" id="subject-section">
+        <span class="section-title">Start learning</span>
+        <div class="box wide wrap" id="subjects">
+          <div class="box column subject">
+            <img class="desktop" src="resources/images/course-software.jpg"/>
+						<span class="subject-title">Software engineering</span>
+						<p class="desktop">COURSES</p>
+						<p class="desktop">Web Development, Mobile Development, iOS, APIs</p>
+          </div>
+          <div class="box column subject">
+            <img class="desktop" src="resources/images/course-computer-art.jpg"/>
+						<span class="subject-title">Computer art</span>
+						<p class="desktop">COURSES</p>
+						<p class="desktop">Imaging & Design, Web Design, Motion Graphics & Visual Effects,
+							Computer Animation</p>
+          </div>
+          <div class="box column subject">
+            <img class="desktop" src="resources/images/course-design.jpg"/>
+						<span class="subject-title">Design</span>
+						<p class="desktop">COURSES</p>
+						<p class="desktop">User Experience Design, User Research, Visual Design</p>
+          </div>
+          <div class="box column subject">
+            <img class="desktop" src="resources/images/course-data.jpg"/>
+						<span class="subject-title">Data</span>
+						<p class="desktop">COURSES</p>
+						<p class="desktop">Data Science, Big Data, SQL, Data Visualization</p>
+          </div>
+          <div class="box column subject">
+            <img class="desktop" src="resources/images/course-business.jpg"/>
+						<span class="subject-title">Business</span>
+						<p class="desktop">COURSES</p>
+						<p class="desktop">Product Development, Business Development, Startup</p>
+          </div>
+          <div class="box column subject">
+            <img class="desktop" src="resources/images/course-marketing.jpg"/>
+						<span class="subject-title">Marketing</span>
+						<p class="desktop">COURSES</p>
+						<p class="desktop">Analytics, Content Marketing, Mobile Marketing</p>
+          </div>
+        </div>
+      </div>
+      <!-- Main Content: Subject section -->
+
+      <!-- Main Content: Thesis section -->
+      <div class="box wide column" id="thesis-section">
+        <span class="section-title">Thesis exhibit</span>
+        <div class="box wide">
+          <div class="box main column">
+            <video controls><source src="resources/videos/thesis.mp4" type="video/mp4"></video>
+            <span class="desktop main-title">Reimagine urban</span>
+            <p class="desktop">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam
+              et commodo lectus, nec consequat neque. Sed non accumsan urna.
+              Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur
+              dolor consequat, tristique ligula."</p>
+          </div>
+          <div class="desktop box sidebar column">
+            <div class="box wide align-center highlight">
+              <div class="sidebar-image">
+                <img src="resources/images/thesis-fisma.jpg"/>
+              </div>
+              <div class="sidebar-content column">
+  							<span class="sidebar-title">Fisma: Design and Prototype</span>
+  							<p>Designer showcase of new prototype product</p>
+              </div>
+            </div>
+            <div class="box wide align-center">
+              <div class="sidebar-image">
+                <img src="resources/images/thesis-now-and-then.jpg"/>
+              </div>
+              <div class="sidebar-content column">
+  							<span class="sidebar-title">Now and then</span>
+  							<p>Research study about New York</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main Content: Thesis section -->
+    </div>
+    <!-- Main Content -->
+
+    <!-- Footer -->
+    <footer class="box wide">
+      <div class="box wide between content">
+        <span>&copy;2016 Colmar Academy. All rights reserved</span>
+        <nav>
+          <ul class="desktop box">
+            <li><a class="btn" href="#">Terms</a></li>
+            <li><a class="btn" href="#">Privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
 </html>
