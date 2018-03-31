@@ -1,4 +1,6 @@
-/* Universal Styles */
+/*=======================================================================
+  Universal Styles
+=======================================================================*/
 
 @font-face {
   font-family : "Martel Sans";
@@ -12,11 +14,23 @@
   src         : url(../fonts/MartelSans-ExtraBold.ttf) format('truetype');
 }
 
+/* ...Variables */
 :root {
+  /* Font colors */
   --color-light  : #BBB;
   --color-medium : #7F7F7F;
   --color-dark   : #555;
+  /* Background colors */
+  --bkgd-light   : #FFF;
+  --bkgd-medium  : #CCC;
+  --bkgd-dark    : #666;
+  /* Link colors */
+  --color-link   : #00F;
+  --color-hover  : #FF0;
+  --bkgd-hover   : #F00;
 }
+
+/* ...Text settings */
 
 html {
   font-family : Helvetica,
@@ -25,11 +39,21 @@ html {
   font-size   : 16px;
 }
 
+a,
+p,
+span {
+  color           : var(--color-medium);
+  text-decoration : none;
+  line-height     : 1.4;
+}
+
+/* ...Offset for header */
 body {
   position : relative;
   top      : 4rem;
-  /* Offset for header */
 }
+
+/* ...Flexbox settings */
 
 .box {
   display  : flex;
@@ -52,12 +76,12 @@ body {
   height : 100%;
 }
 
-.justify-center {
-  justify-content : center;
-}
-
 .align-center {
   align-items : center;
+}
+
+.start {
+  align-items : flex-start;
 }
 
 .around {
@@ -68,10 +92,7 @@ body {
   justify-content : space-between;
 }
 
-header .content {
-  margin : 0 1rem 0 1.5rem;
-}
-
+/* ...Media */
 img,
 video {
   display : block;
@@ -79,13 +100,7 @@ video {
   height  : auto;
 }
 
-a,
-p,
-span {
-  color           : var(--color-medium);
-  text-decoration : none;
-  line-height     : 1.4;
-}
+/* ...Button settings */
 
 .btn {
   display : block;
@@ -98,22 +113,21 @@ span {
   width            : 90%;
   margin-top       : 1rem;
   padding          : 0.5rem 0;
-  color            : white;
-  background-color : var(--color-dark);
+  color            : var(--color-light);
+  background-color : var(--bkgd-dark);
   text-align       : center;
 }
 
 .btn:hover {
-  color            : yellow;
-  background-color : maroon;
+  color            : var(--color-hover);
+  background-color : var(--bkgd-hover);
 }
 
 a:visited {
   color : var(--color-dark);
 }
 
-/* Universal Styles: Desktop */
-
+/* ...Desktop only */
 @media
   only screen
   and (min-width : 625px) {
@@ -122,8 +136,7 @@ a:visited {
   }
 }
 
-/* Universal Styles: Mobile */
-
+/* ...Mobile only */
 @media
   only screen
   and (max-width : 625px) {
@@ -132,18 +145,23 @@ a:visited {
   }
 }
 
-/* Header */
+/*=======================================================================
+  Header
+=======================================================================*/
 
 header {
   z-index          : 1;
   position         : fixed;
   top              : 0;
   height           : 4rem;
-  background-color : white;
-  /* Temporary visual aid */
+  background-color : var(--bkgd-light);
 }
 
-/* Header: Desktop logo section */
+header .content {
+  margin : 0 1rem 0 1.5rem;
+}
+
+/* ...Desktop logo section */
 
 header img {
   max-height : 2rem;
@@ -172,9 +190,9 @@ header img {
   font-weight : 600;
 }
 
-/* Header: Desktop nav section */
-
-/* Main Content */
+/*=======================================================================
+  Main Content
+=======================================================================*/
 
 .main {
   width  : 60%;
@@ -226,7 +244,7 @@ header img {
 }
 
 .read-more {
-  color : blue;
+  color : var(--color-link);
 }
 
 .read-more:hover {
@@ -240,10 +258,12 @@ header img {
 #banner-section,
 #subject-section,
 .highlight {
-  background-color : silver;
+  background-color : var(--bkgd-medium);
 }
 
-/* Main Content: Banner section */
+/*=======================================================================
+  Main Content: Banner section
+=======================================================================*/
 
 #banner-section {
   align-items : center;
@@ -260,6 +280,7 @@ header img {
   font-weight : bold;
 }
 
+/* ...Mobile settings */
 @media
   only screen
   and (max-width : 625px) {
@@ -267,11 +288,7 @@ header img {
     flex-direction : column;
   }
 
-  #banner-section .main {
-    width  : 100%;
-    margin : 0;
-  }
-
+  #banner-section .main,
   #banner-section .sidebar {
     width  : 100%;
     margin : 0;
@@ -294,24 +311,30 @@ header img {
   }
 }
 
-/* Main Content: Information section */
+/*=======================================================================
+  Main Content: Information section
+=======================================================================*/
 
+/* ...Mobile settings */
 @media
   only screen
   and (max-width : 625px) {
-    #information-section {
-      margin: -1rem 0 0 0;
-    }
-    #information-section .sidebar {
-      width: 100%;
-      margin: 0;
-    }
+  #information-section {
+    margin : -1rem 0 0 0;
+  }
+
+  #information-section .sidebar {
+    width  : 100%;
+    margin : 0;
+  }
+
   .sidebar-content {
     width  : 100%;
     margin : 2rem 1rem;
   }
+
   .sidebar-content img {
-    margin-bottom: 1rem;
+    margin-bottom : 1rem;
   }
 
   .sidebar-content a,
@@ -321,33 +344,32 @@ header img {
   }
 
   .sidebar-content p {
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
+    padding-top    : 1rem;
+    padding-bottom : 0.5rem;
   }
 
   .highlight {
-    background-color : white;
+    background-color : var(--bkgd-light);
   }
 }
 
-/* Main Content: Subjects section */
+/*=======================================================================
+  Main Content: Subjects section
+=======================================================================*/
 
 #subjects {
   width       : auto;
   margin      : 0 3.5rem;
-  align-items : flex-start;
 }
 
 .subject {
   margin           : 0 1rem 2rem 1rem;
   padding-bottom   : 1.5rem;
-  background-color : white;
+  background-color : var(--bkgd-light);
+  /* standardize width of subjects */
   flex             : 1;
   flex-basis       : 25%;
-}
-
-.subject p {
-  margin : 0.5rem 1rem 0 1rem;
+  /*** standardize height??? ***/
 }
 
 .subject-title {
@@ -358,11 +380,16 @@ header img {
   font-weight  : bold;
 }
 
+.subject p {
+  margin : 0.5rem 1rem 0 1rem;
+}
+
+/* ...Mobile settings */
 @media
   only screen
   and (max-width : 625px) {
   #subject-section {
-    background-color : white;
+    background-color : var(--bkgd-light);
   }
 
   #subjects {
@@ -378,18 +405,21 @@ header img {
   .subject {
     margin           : 0 1rem 0.5rem 1rem;
     padding          : 1rem 1rem 1.5rem 1rem;
-    background-color : silver;
+    background-color : var(--bkgd-medium);
     flex-basis       : 80%;
   }
 }
 
-/* Main Content: Thesis section */
+/*=======================================================================
+  Main Content: Thesis section
+=======================================================================*/
 
 #thesis-section .main,
 #thesis-section .sidebar {
   margin-top : 0;
 }
 
+/* ...Mobile settings */
 @media
   only screen
   and (max-width : 625px) {
@@ -399,7 +429,9 @@ header img {
   }
 }
 
-/* Footer */
+/*=======================================================================
+  Footer
+=======================================================================*/
 
 footer .content {
   margin    : 1rem 1rem 1rem 1.5rem;
