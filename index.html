@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Colmar Academy</title>
     <link href="resources/css/reset.css" type="text/css" rel="stylesheet"/>
     <link href="resources/css/style.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
   </head>
   <body>
     <!-- Header -->
     <header class="box wide">
       <!-- Header: Desktop only -->
-			<div class="desktop box wide between content">
+			<div class="desktop box wide between content" role="presentation">
 				<div class="box align-center" id="logo">
-					<img src="resources/images/ic-logo.svg" alt="Colmar academy"/>
+					<img src="resources/images/ic-logo.svg" alt=""/>
 					<div class="box" id="logo-txt">
 						<span>COLMAR</span><span>ACADEMY</span>
 					</div>
 				</div>
 				<nav>
 					<ul class="box tall">
-						<li><a class="btn" href="#">On campus</a></li>
-						<li><a class="btn" href="#">Online</a></li>
-						<li><a class="btn" href="#">For companies</a></li>
-						<li><a class="btn" href="#">Sign in</a></li>
+						<li><a class="btn light" href="#">On campus</a></li>
+						<li><a class="btn light" href="#">Online</a></li>
+						<li><a class="btn light" href="#">For companies</a></li>
+						<li><a class="btn light" href="#">Sign in</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -29,17 +32,17 @@
 			<nav class="mobile wide">
 				<ul class="box wide tall around align-center">
 					<li><img src="resources/images/ic-logo.svg" alt="Colmar academy"/></li>
-					<li><a class="btn" href="#"><img src="resources/images/ic-on-campus.svg" alt="On campus"/></a></li>
-					<li><a class="btn" href="#"><img src="resources/images/ic-online.svg" alt="Online"/></a></li>
-					<li><a class="btn" href="#"><img src="resources/images/ic-login.svg" alt="Sign in"/></a></li>
+					<li><a class="btn light" href="#"><img src="resources/images/ic-on-campus.svg" alt="On campus"/></a></li>
+					<li><a class="btn light" href="#"><img src="resources/images/ic-online.svg" alt="Online"/></a></li>
+					<li><a class="btn light" href="#"><img src="resources/images/ic-login.svg" alt="Sign in"/></a></li>
         </ul>
 			</nav>
     </header>
 
     <!-- Main Content -->
-    <div>
+    <main>
       <!-- Main Content: Banner section -->
-      <div class="box wide" id="banner-section">
+      <section class="box wide" id="banner-section" role="banner">
         <!-- ...Banner section: Main content -->
         <div class="box main column">
 					<img src="resources/images/banner.jpg" alt="Banner"/>
@@ -48,15 +51,15 @@
         <div class="box sidebar column">
           <span class="main-title">Learn something new everyday</span>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a class="btn dark" href="#">Start here</a>
+          <a class="btn dark" role="button" href="#">Start here</a>
         </div>
-      </div>
+      </section>
       <!-- Main Content: Banner section -->
 
       <!-- Main Content: Information section -->
-      <div class="box wide" id="information-section">
+      <section class="box wide" id="information-section">
         <!-- ...Information section: Main content -->
-        <div class="desktop box main column">
+        <article class="desktop box main column">
           <img src="resources/images/information-main.jpg" alt="Main information"/>
 					<span class="main-title">It doesn't hurt to keep practicing</span>
 					<p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et
@@ -64,36 +67,36 @@
 						Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur
 						dolor consequat, tristique ligula."</p>
 					<span class="caption">Emanuel, Sr Strategist at Hiring.com</span>
-        </div>
+        </article>
         <!-- ...Information section: Sidebar content -->
-        <div class="box sidebar column">
+        <div class="box sidebar column" role="presentation">
           <!-- .../...Sidebar content: Item 1 -->
-          <div class="box wide align-center">
-            <div class="sidebar-image desktop">
+          <aside class="box wide align-center hover" role="presentation">
+            <div class="sidebar-image desktop" role="img">
 							<img src="resources/images/information-orientation.jpg" alt="Organization information"/>
             </div>
             <div class="sidebar-content column">
 							<img class="mobile" src="resources/images/information-orientation-mobile.jpg" alt="Organization information"/>
               <span class="sidebar-title">Orientation date</span>
 							<p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
-							<a class="read-more" href="#">Read more</a>
+							<a class="read-more" role="link" href="#">Read more</a>
             </div>
-          </div>
+          </aside>
           <!-- .../...Sidebar content: Item 2 -->
-          <div class="box wide align-center">
-            <div class="sidebar-image desktop">
+          <aside class="box wide align-center hover">
+            <div class="sidebar-image desktop" role="img">
 							<img src="resources/images/information-campus.jpg" alt="Campus information"/>
             </div>
             <div class="sidebar-content column">
 							<img class="mobile" src="resources/images/information-campus-mobile.jpg" alt="Campus information"/>
               <span class="sidebar-title">Our campus</span>
 							<p>Find which campus is close by you</p>
-							<a class="read-more" href="#">Read more</a>
+							<a class="read-more" role="link" href="#">Read more</a>
             </div>
-          </div>
+          </aside>
           <!-- .../...Sidebar content: Item 3 -->
-          <div class="box wide align-center highlight">
-            <div class="sidebar-image desktop">
+          <aside class="box wide align-center hover">
+            <div class="sidebar-image desktop" role="img">
 							<img src="resources/images/information-guest-lecture.jpg" alt="Guest lecture information"/>
             </div>
             <div class="sidebar-content column">
@@ -101,28 +104,28 @@
               <span class="sidebar-title">Our guest lecture</span>
 							<p>Join a keynote with Oliver Sack about music in medical
 								treatment</p>
-							<a class="read-more" href="#">Read more</a>
+							<a class="read-more" role="link" href="#">Read more</a>
             </div>
-          </div>
+          </aside>
         </div>
-      </div>
+      </section>
       <!-- Main Content: Information section -->
 
       <!-- Main Content: Subject section -->
-      <div class="box wide column" id="subject-section">
-        <span class="section-title">Start learning</span>
-        <div class="box wide wrap start" id="subjects">
+      <section class="box wide column" id="subject-section">
+        <span class="section-title" role="heading">Start learning</span>
+        <div class="box wide wrap start" id="subjects" role="presentation">
           <!-- ...Subject section: Item 1 -->
           <div class="box column subject">
             <img class="desktop" src="resources/images/course-software.jpg" alt="Software courses"/>
-						<span class="subject-title">Software engineering</span>
+						<span class="subject-title"><i class="fa fa-android" role="aria-hidden"></i> Software engineering</span>
 						<p class="desktop">COURSES</p>
 						<p class="desktop">Web Development, Mobile Development, iOS, APIs</p>
           </div>
           <!-- ...Subject section: Item 2 -->
           <div class="box column subject">
             <img class="desktop" src="resources/images/course-computer-art.jpg" alt="Computer art courses"/>
-						<span class="subject-title">Computer art</span>
+						<span class="subject-title"><i class="fa fa-css3" role="aria-hidden"></i> Computer art</span>
 						<p class="desktop">COURSES</p>
 						<p class="desktop">Imaging & Design, Web Design, Motion Graphics & Visual Effects,
 							Computer Animation</p>
@@ -130,41 +133,41 @@
           <!-- ...Subject section: Item 3 -->
           <div class="box column subject">
             <img class="desktop" src="resources/images/course-design.jpg" alt="Design courses"/>
-						<span class="subject-title">Design</span>
+						<span class="subject-title"><i class="fa fa-paint-brush" role="aria-hidden"></i> Design</span>
 						<p class="desktop">COURSES</p>
 						<p class="desktop">User Experience Design, User Research, Visual Design</p>
           </div>
           <!-- ...Subject section: Item 4 -->
           <div class="box column subject">
             <img class="desktop" src="resources/images/course-data.jpg" alt="Data courses"/>
-						<span class="subject-title">Data</span>
+						<span class="subject-title"><i class="fa fa-database" role="aria-hidden"></i> Data</span>
 						<p class="desktop">COURSES</p>
 						<p class="desktop">Data Science, Big Data, SQL, Data Visualization</p>
           </div>
           <!-- ...Subject section: Item 5 -->
           <div class="box column subject">
             <img class="desktop" src="resources/images/course-business.jpg" alt="Business courses"/>
-						<span class="subject-title">Business</span>
+						<span class="subject-title"><i class="fa fa-building" role="aria-hidden"></i> Business</span>
 						<p class="desktop">COURSES</p>
 						<p class="desktop">Product Development, Business Development, Startup</p>
           </div>
           <!-- ...Subject section: Item 6 -->
-          <div class="box column subject">
+          <div class="box column subject" id="subject-6">
             <img class="desktop" src="resources/images/course-marketing.jpg" alt="Marketing courses"/>
-						<span class="subject-title">Marketing</span>
+						<span class="subject-title"><i class="fa fa-tv" role="aria-hidden"></i> Marketing</span>
 						<p class="desktop">COURSES</p>
 						<p class="desktop">Analytics, Content Marketing, Mobile Marketing</p>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Main Content: Subject section -->
 
       <!-- Main Content: Thesis section -->
-      <div class="box wide column" id="thesis-section">
-        <span class="section-title">Thesis exhibit</span>
-        <div class="box wide">
+      <section class="box wide column" id="thesis-section">
+        <span class="section-title" role="heading">Thesis exhibit</span>
+        <div class="box wide" role="presentation">
           <!-- ...Thesis section: Main content -->
-          <div class="box main column">
+          <div class="box main column" role="main">
             <video controls><source src="resources/videos/thesis.mp4" type="video/mp4">Your browser cannot play this video</video>
             <span class="desktop main-title">Reimagine urban</span>
             <p class="desktop">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam
@@ -173,9 +176,9 @@
               dolor consequat, tristique ligula."</p>
           </div>
           <!-- ...Thesis section: Sidebar content -->
-          <div class="desktop box sidebar column">
+          <div class="desktop box sidebar column" role="presentation">
             <!-- .../...Sidebar content: Item 1 -->
-            <div class="box wide align-center highlight">
+            <aside class="box wide align-center hover">
               <div class="sidebar-image">
                 <img src="resources/images/thesis-fisma.jpg" alt="Fisma thesis"/>
               </div>
@@ -183,30 +186,30 @@
   							<span class="sidebar-title">Fisma: Design and Prototype</span>
   							<p>Designer showcase of new prototype product</p>
               </div>
-            </div>
+            </aside>
             <!-- .../...Sidebar content: Item 2 -->
-            <div class="box wide align-center">
-              <div class="sidebar-image">
+            <aside class="box wide align-center hover">
+              <div class="sidebar-image" role="img">
                 <img src="resources/images/thesis-now-and-then.jpg" alt="Now and then thesis"/>
               </div>
               <div class="sidebar-content column">
   							<span class="sidebar-title">Now and then</span>
   							<p>Research study about New York</p>
               </div>
-            </div>
+            </aside>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Main Content: Thesis section -->
-    </div>
+    </main>
     <!-- Main Content -->
 
     <!-- Footer -->
     <footer class="box wide">
-      <div class="box wide between content">
-        <span>&copy;2016 Colmar Academy. All rights reserved</span>
-        <nav>
-          <ul class="desktop box">
+      <div class="box wide between content" role:"presentation">
+        <span>&copy; 2016 Colmar Academy. All rights reserved</span>
+        <nav class="desktop">
+          <ul class="box">
             <li><a class="btn" href="#">Terms</a></li>
             <li><a class="btn" href="#">Privacy</a></li>
           </ul>

@@ -1,6 +1,8 @@
-/*=======================================================================
-  Universal Styles
-=======================================================================*/
+/**
+ * =======================================================================
+ * Universal Styles
+ * =======================================================================
+ */
 
 @font-face {
   font-family : "Martel Sans";
@@ -15,6 +17,7 @@
 }
 
 /* ...Variables */
+
 :root {
   /* Font colors */
   --color-light  : #BBB;
@@ -26,8 +29,8 @@
   --bkgd-dark    : #666;
   /* Link colors */
   --color-link   : #00F;
-  --color-hover  : #FF0;
-  --bkgd-hover   : #F00;
+  --color-hover  : #008000;
+  --bkgd-hover   : #0F0;
 }
 
 /* ...Text settings */
@@ -48,6 +51,7 @@ span {
 }
 
 /* ...Offset for header */
+
 body {
   position : relative;
   top      : 4rem;
@@ -93,6 +97,7 @@ body {
 }
 
 /* ...Media */
+
 img,
 video {
   display : block;
@@ -114,13 +119,31 @@ video {
   margin-top       : 1rem;
   padding          : 0.5rem 0;
   color            : var(--color-light);
-  background-color : var(--bkgd-dark);
+  border           : 2px solid var(--bkgd-hover);
+  border-radius    : 5rem;
+  background-color : var(--color-hover);
   text-align       : center;
 }
 
-.btn:hover {
+.btn.dark:hover {
   color            : var(--color-hover);
+  border           : 2px solid var(--color-hover);
+  border-radius    : 5rem;
   background-color : var(--bkgd-hover);
+  transition       : all 0.8s linear;
+}
+
+.btn.light {
+  border-right : 2px solid var(--bkgd-light);
+  border-left  : 2px solid var(--bkgd-light);
+}
+
+.btn.light:hover {
+  color            : var(--color-hover);
+  border-right     : 2px solid var(--color-hover);
+  border-left      : 2px solid var(--color-hover);
+  background-color : var(--bkgd-hover);
+  transition       : all 0.4s linear;
 }
 
 a:visited {
@@ -128,6 +151,7 @@ a:visited {
 }
 
 /* ...Desktop only */
+
 @media
   only screen
   and (min-width : 625px) {
@@ -137,6 +161,7 @@ a:visited {
 }
 
 /* ...Mobile only */
+
 @media
   only screen
   and (max-width : 625px) {
@@ -145,9 +170,11 @@ a:visited {
   }
 }
 
-/*=======================================================================
-  Header
-=======================================================================*/
+/**
+ * =======================================================================
+ * Header
+ * =======================================================================
+ */
 
 header {
   z-index          : 1;
@@ -190,9 +217,11 @@ header img {
   font-weight : 600;
 }
 
-/*=======================================================================
-  Main Content
-=======================================================================*/
+/**
+ * ======================================================================= Main
+ * Content
+ * =======================================================================
+ */
 
 .main {
   width  : 60%;
@@ -237,6 +266,10 @@ header img {
   font-weight : bold;
 }
 
+aside.hover:hover {
+  background-color : var(--bkgd-medium);
+}
+
 .caption {
   margin-top  : 1rem;
   font-size   : 0.75rem;
@@ -256,14 +289,15 @@ header img {
 }
 
 #banner-section,
-#subject-section,
-.highlight {
+#subject-section {
   background-color : var(--bkgd-medium);
 }
 
-/*=======================================================================
-  Main Content: Banner section
-=======================================================================*/
+/**
+ * ======================================================================= Main
+ * Content: Banner section
+ * =======================================================================
+ */
 
 #banner-section {
   align-items : center;
@@ -281,6 +315,7 @@ header img {
 }
 
 /* ...Mobile settings */
+
 @media
   only screen
   and (max-width : 625px) {
@@ -311,11 +346,14 @@ header img {
   }
 }
 
-/*=======================================================================
-  Main Content: Information section
-=======================================================================*/
+/**
+ * ======================================================================= Main
+ * Content: Information section
+ * =======================================================================
+ */
 
 /* ...Mobile settings */
+
 @media
   only screen
   and (max-width : 625px) {
@@ -347,29 +385,27 @@ header img {
     padding-top    : 1rem;
     padding-bottom : 0.5rem;
   }
-
-  .highlight {
-    background-color : var(--bkgd-light);
-  }
 }
 
-/*=======================================================================
-  Main Content: Subjects section
-=======================================================================*/
+/**
+ * ======================================================================= Main
+ * Content: Subjects section
+ * =======================================================================
+ */
 
 #subjects {
-  width       : auto;
-  margin      : 0 3.5rem;
+  width  : auto;
+  margin : 0 3.5rem;
 }
 
 .subject {
   margin           : 0 1rem 2rem 1rem;
   padding-bottom   : 1.5rem;
   background-color : var(--bkgd-light);
-  /* standardize width of subjects */
   flex             : 1;
   flex-basis       : 25%;
-  /*** standardize height??? ***/
+  /* standardize width of subjects */
+  /* * standardize height??? ** */
 }
 
 .subject-title {
@@ -385,6 +421,7 @@ header img {
 }
 
 /* ...Mobile settings */
+
 @media
   only screen
   and (max-width : 625px) {
@@ -407,12 +444,16 @@ header img {
     padding          : 1rem 1rem 1.5rem 1rem;
     background-color : var(--bkgd-medium);
     flex-basis       : 80%;
+
+    /* Expand images and courses on click or hover??? */
   }
 }
 
-/*=======================================================================
-  Main Content: Thesis section
-=======================================================================*/
+/**
+ * ======================================================================= Main
+ * Content: Thesis section
+ * =======================================================================
+ */
 
 #thesis-section .main,
 #thesis-section .sidebar {
@@ -420,6 +461,7 @@ header img {
 }
 
 /* ...Mobile settings */
+
 @media
   only screen
   and (max-width : 625px) {
@@ -429,9 +471,11 @@ header img {
   }
 }
 
-/*=======================================================================
-  Footer
-=======================================================================*/
+/**
+ * =======================================================================
+ * Footer
+ * =======================================================================
+ */
 
 footer .content {
   margin    : 1rem 1rem 1rem 1.5rem;
